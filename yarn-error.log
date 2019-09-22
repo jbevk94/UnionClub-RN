@@ -1,6 +1,6 @@
 Arguments: 
   /nix/store/wac54isylf7jz7wjgql2bqbqmzwwlipa-nodejs-10.16.0/bin/node /nix/store/llcg7a9x0ibmmjxs9bgahb93bc439yfk-yarn-1.17.3/bin/yarn
-
+ 
 PATH: 
   /nix/store/llcg7a9x0ibmmjxs9bgahb93bc439yfk-yarn-1.17.3/bin:/Users/szymonkapala/work/expo/bin:/Users/szymonkapala/.nix-profile/bin:/Users/szymonkapala/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/apache-maven-3.6.1/bin
 
