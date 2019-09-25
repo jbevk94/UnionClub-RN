@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 import Gallery from './GalleryComponent';
 import { View, Platform } from 'react-native';
+import Blog from "./BlogComponent";
 
 const GalleryNavigator = createStackNavigator({
     Gallery: { screen: Gallery },
-      
+      // Add CSS style
 }, {
     initialRouteName: 'Gallery',
     navigationOptions: {
         headerStyle: {
-            backgroundColor: "#512DA8"
+            backgroundColor: "rgba(0,0,0,0)"
         },
-        headerTintColor: '#fff',
+        headerTintColor: '',
         headerTitleStyle: {
-            color: "#fff"            
+            color: ""            
         }
     }
 });
@@ -45,19 +46,19 @@ const GalleryNavigator = createStackNavigator({
 //       }
 //     }
 // });
-// const BlogNavigator = createStackNavigator({
-//     Blog: { screen: Blog }
-//   }, {
-//     navigationOptions: {
-//       headerStyle: {
-//         backgroundColor: "#512DA8"
-//       },
-//       headerTintColor: "#fff",
-//       headerTitleStyle: {
-//         color: "#fff"
-//       }
-//     }
-// });
+const BlogNavigator = createStackNavigator({
+    Blog: { screen: Blog }
+  }, {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#512DA8"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff"
+      }
+    }
+});
 
 const MainNavigator = createDrawerNavigator({
     // Home: {
@@ -81,13 +82,13 @@ const MainNavigator = createDrawerNavigator({
 //       drawerLabel: 'About'
 //     }
 // },
-// Blog: {
-//     screen: BlogNavigator,
-//     navigationOptions: {
-//       title: 'Blog',
-//       drawerLabel: 'Blog'
-//     }
-// }
+Blogs: {
+    screen: BlogNavigator,
+    navigationOptions: {
+      title: 'Blog',
+      drawerLabel: 'Blog'
+    }
+}
   },
  {    drawerBackgroundColor: '#D1C4E9'});
 
