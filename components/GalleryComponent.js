@@ -22,7 +22,7 @@ class Gallery extends Component {
           key={index}
           title={item.name}
           subtitle={item.description}
-        
+          leftAvatar={{ source: { uri: item.avatar_url } }}
         />
       );
     };

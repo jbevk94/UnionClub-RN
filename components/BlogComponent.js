@@ -29,6 +29,9 @@ class Blog extends Component {
        <ScrollView>
            
      <Card title="Coworking + Arts + Events">
+       <Text>
+         Blog Coworking Events History Inspiration Interview Members Press Uncategorized
+       </Text>
      <FlatList
        data={this.state.blogs}
        renderItem={renderBlogger}
