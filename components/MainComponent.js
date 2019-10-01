@@ -9,6 +9,7 @@ import Gallery from "./GalleryComponent";
 import { View, Platform, ScrollView, Image, StyleSheet, Text } from "react-native";
 import Blog from "./BlogComponent";
 import { Icon } from "react-native-elements";
+import Pricing from "./PricingComponent";
 
 const CustomDrawerContentComponent = props => (
   <ScrollView>
@@ -49,6 +50,36 @@ const GalleryNavigator = createStackNavigator(
   },
   {
     initialRouteName: "Gallery",
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "rgba(0,0,0,0)"
+      },
+      headerTintColor: "",
+      headerTitleStyle: {
+        color: "rgba(0,0,0,0)"
+      }
+    }
+  }
+);
+
+
+const PriceNavigator = createStackNavigator(
+  {
+    Pricing: { screen: Pricing },
+    navigationOptions: ({ navigation }) => ({
+      headerLeft: (
+        <Icon
+          name="menu"
+          size={24}
+          color="white"
+          onPress={() => navigation.toggleDrawer()}
+        />
+      )
+    })
+    // Add CSS style
+  },
+  {
+    initialRouteName: "Pricing",
     navigationOptions: {
       headerStyle: {
         backgroundColor: "rgba(0,0,0,0)"
@@ -104,6 +135,8 @@ const BlogNavigator = createStackNavigator(
   }
 );
 
+
+
 const MainNavigator = createDrawerNavigator(
   {
     // Home: {
@@ -129,6 +162,21 @@ const MainNavigator = createDrawerNavigator(
         drawerIcon: ({ tintColor, focused }) => (
           <Icon
             name="gallery"
+            type="font-awesome"
+            size={24}
+            color={tintColor}
+          />
+        )
+      }
+    },
+    Pricing: {
+      screen: PriceNavigator,
+      navigationOptions: {
+        title: "Pricing",
+        drawerLabel: "Pricing",
+        drawerIcon: ({ tintColor, focused }) => (
+          <Icon
+            name="pricing"
             type="font-awesome"
             size={24}
             color={tintColor}
