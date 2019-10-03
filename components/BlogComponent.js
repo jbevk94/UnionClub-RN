@@ -1,46 +1,41 @@
 import React, { Component } from "react";
 import { Text, ScrollView, FlatList } from "react-native";
-import { Card, ListItem } from "react-native-elements";
+import { Card, ListItem, Avatar } from "react-native-elements";
 import { BLOGS } from "../shared/blogs";
 
 class Blog extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        blogs: BLOGS
-      };
-    }
-    static navigationOptions = {
-      title: "Blog"
+  constructor(props) {
+    super(props);
+    this.state = {
+      blogs: BLOGS
     };
-    render() {
-        const renderBlogger = ({item,index}) => {
-       return (
-           <ListItem
-          key={index}
-          title={item.title}
-          leftAvatar={{ source: { uri: item.avatar_url } }}
-          subtitle={item.description}
-          
-        />
-           );
-     };
-     return (
-       <ScrollView>
-           
-     <Card title="Coworking + Arts + Events">
-       <Text>
-         Blog Coworking Events History Inspiration Interview Members Press Uncategorized
-       </Text>
-     <FlatList
-       data={this.state.blogs}
-       renderItem={renderBlogger}
-       keyExtractor={item => item.id.toString()}
-     />
-     </Card>
-           </ScrollView>
-     );}   
-         
-   }
+  }
+  static navigationOptions = {
+    title: "Blog"
+  };
+  render() {
+    const renderBlogger = ({ item, index }) => {
+      return (
+        <Card>
+           <Avatar size={300} source={item.image} />
+          <ListItem key={index} 
+          title={item.subtitle}
+          subtitle={item.title}  />
+          <Text>{item.description}</Text>
+        </Card>
+      );
+    };
+    return (
+      <ScrollView>
 
-    export default Blog;
+        <FlatList
+          data={this.state.blogs}
+          renderItem={renderBlogger}
+          keyExtractor={item => item.id.toString()}
+        />
+      </ScrollView>
+    );
+  }
+}
+
+export default Blog;
