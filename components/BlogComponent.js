@@ -1,7 +1,20 @@
 import React, { Component } from "react";
-import { Text, ScrollView, FlatList } from "react-native";
+import { Text, ScrollView, FlatList, StyleSheet } from "react-native";
 import { Card, ListItem, Avatar } from "react-native-elements";
 import { BLOGS } from "../shared/blogs";
+
+const styles = StyleSheet.create({
+  header: {
+    fontSize: 24
+  },
+  p: {
+    fontSize: 16
+  },
+  h3: {
+    fontSize: 18,
+    color:'#787878'
+  }
+});
 
 class Blog extends Component {
   constructor(props) {
@@ -17,18 +30,18 @@ class Blog extends Component {
     const renderBlogger = ({ item, index }) => {
       return (
         <Card>
-           <Avatar size={300} source={item.image} />
+           <Avatar size={350} source={item.image} />
           <ListItem key={index} 
           title={item.subtitle}
           subtitle={item.title}  />
-          <Text>{item.description}</Text>
+          <Text style={styles.p}>{item.description}</Text>
         </Card>
       );
     };
     return (
       <ScrollView>
 <Card title="Coworking + Arts + Events">
-          <Text>
+          <Text style={styles.h3}>
             Blog Coworking Events History Inspiration Interview Members Press
             Uncategorized
           </Text>

@@ -1,7 +1,16 @@
 import React, { Component } from "react";
-import { Text, ScrollView, FlatList, View } from "react-native";
-import { ListItem, Avatar } from "react-native-elements";
+import { Text, ScrollView, FlatList, View, StyleSheet } from "react-native";
+import { ListItem, Avatar, Card } from "react-native-elements";
 import { PRICES } from "../shared/prices";
+
+const styles = StyleSheet.create({
+  header: {
+    fontSize: 24
+  },
+  p: {
+    fontSize: 16
+  }
+});
 
 class Pricing extends Component {
   constructor(props) {
@@ -16,22 +25,21 @@ class Pricing extends Component {
   render() {
     const renderPrice = ({ item, index }) => {
       return (
-        <View>
+        <Card>
+          <Avatar size={350} source={item.image} />
           <ListItem key={index} title={item.name} subtitle={item.amount} />
-          <Avatar size={300} source={item.image} />
-          <Text>{item.description}</Text>
-        </View>
+
+          <Text style={styles.p}>{item.description}</Text>
+        </Card>
       );
     };
     return (
       <ScrollView>
-        
-          <FlatList
-            data={this.state.prices}
-            renderItem={renderPrice}
-            keyExtractor={item => item.id.toString()}
-          />
-    
+        <FlatList
+          data={this.state.prices}
+          renderItem={renderPrice}
+          keyExtractor={item => item.id.toString()}
+        />
       </ScrollView>
     );
   }
