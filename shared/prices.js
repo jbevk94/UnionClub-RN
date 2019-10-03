@@ -2,7 +2,7 @@ export const PRICES = [
     {
       id: 0,
       name: "DAY PASS",
-      avatar_url: "https://unionclubtacoma.com/wp-content/uploads/2017/12/DayPass.png",
+      image: "https://unionclubtacoma.com/wp-content/uploads/2017/12/DayPass.png",
       amount: "$20/day",
       featured: false,
       description:
@@ -11,7 +11,7 @@ export const PRICES = [
     {
       id: 1,
       name: "5 DAY PASSES",
-      avatar_url:
+      image:
         "https://unionclubtacoma.com/wp-content/uploads/2018/05/5DayPassPhoto.jpg",
       amount: "$75/day",
       featured: true,
@@ -21,7 +21,7 @@ export const PRICES = [
     {
       id: 2,
       name: "CLUB CAFE MEMBERSHIP",
-      avatar_url: "https://unionclubtacoma.com/wp-content/uploads/2017/12/Cafe.png",
+      image: "https://unionclubtacoma.com/wp-content/uploads/2017/12/Cafe.png",
       amount: "$99/day",
       featured: true,
       description:
@@ -30,7 +30,7 @@ export const PRICES = [
     {
       id: 3,
       name: "COMMONS MEMBERSHIP",
-      avatar_url: "https://unionclubtacoma.com/wp-content/uploads/2017/12/commons.png",
+      image: "https://unionclubtacoma.com/wp-content/uploads/2017/12/commons.png",
       amount: "$175/month",
       featured: true,
       description:
@@ -39,7 +39,7 @@ export const PRICES = [
     {
       id: 4,
       name: "DEDICATED DESK",
-      avatar_url:
+      image:
         "https://unionclubtacoma.com/wp-content/uploads/2017/12/DedicatedDesk.png",
       amount: "$199/month",
       featured: true,
@@ -49,7 +49,7 @@ export const PRICES = [
     {
       id: 5,
       name: "PRIVATE OFFICE",
-      avatar_url:
+      image:
         "https://unionclubtacoma.com/wp-content/uploads/2017/12/DedicatedDesk.png",
       amount: "$399/month",
       featured: true,
@@ -59,7 +59,7 @@ export const PRICES = [
     {
       id: 6,
       name: "PRIVATE OFFICE",
-      avatar_url:
+      image:
         "https://unionclubtacoma.com/wp-content/uploads/2017/12/EventRentals470x382.jpg",
       amount: "$75/hour and up",
       featured: true,

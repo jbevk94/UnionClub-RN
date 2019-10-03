@@ -56,7 +56,7 @@ const GalleryNavigator = createStackNavigator(
       },
       headerTintColor: "",
       headerTitleStyle: {
-        color: "rgba(0,0,0,0)"
+        color: "white"
       }
     }
   }
@@ -76,7 +76,6 @@ const PriceNavigator = createStackNavigator(
         />
       )
     })
-    // Add CSS style
   },
   {
     initialRouteName: "Pricing",
@@ -86,7 +85,7 @@ const PriceNavigator = createStackNavigator(
       },
       headerTintColor: "",
       headerTitleStyle: {
-        color: "rgba(0,0,0,0)"
+        color: "white"
       }
     }
   }
@@ -125,11 +124,11 @@ const BlogNavigator = createStackNavigator(
   {
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#512DA8"
+        backgroundColor: "black"
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
-        color: "#fff"
+        color: "white"
       }
     }
   }
@@ -161,7 +160,7 @@ const MainNavigator = createDrawerNavigator(
         drawerLabel: "Gallery",
         drawerIcon: ({ tintColor, focused }) => (
           <Icon
-            name="gallery"
+            name="arrow"
             type="font-awesome"
             size={24}
             color={tintColor}
@@ -176,7 +175,7 @@ const MainNavigator = createDrawerNavigator(
         drawerLabel: "Pricing",
         drawerIcon: ({ tintColor, focused }) => (
           <Icon
-            name="pricing"
+            name="list"
             type="font-awesome"
             size={24}
             color={tintColor}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, ListItem, Avatar } from "react-native-elements";
-import { Text, ScrollView, View, FlatList } from "react-native";
+import { ScrollView, View, FlatList } from "react-native";
 import { GALLERY } from "../shared/gallery";
 
 class Gallery extends Component {

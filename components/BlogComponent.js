@@ -27,12 +27,17 @@ class Blog extends Component {
     };
     return (
       <ScrollView>
-
+<Card title="Coworking + Arts + Events">
+          <Text>
+            Blog Coworking Events History Inspiration Interview Members Press
+            Uncategorized
+          </Text>
         <FlatList
           data={this.state.blogs}
           renderItem={renderBlogger}
           keyExtractor={item => item.id.toString()}
         />
+        </Card>
       </ScrollView>
     );
   }
