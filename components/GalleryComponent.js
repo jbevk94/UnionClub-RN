@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, ListItem } from "react-native-elements";
+import { Card, ListItem, Avatar } from "react-native-elements";
 import { Text, ScrollView, View, FlatList } from "react-native";
 import { GALLERY } from "../shared/gallery";
 
@@ -18,12 +18,10 @@ class Gallery extends Component {
   render() {
     const renderGallery = ({ item, index }) => {
       return (
-        <ListItem
-          key={index}
-          title={item.name}
-          subtitle={item.description}
-          leftAvatar={{ source: { uri: item.avatar_url } }}
-        />
+        <View>
+          <ListItem key={index} title={item.name} subtitle={item.subtitle} />
+          <Avatar size={400} source={item.image} />
+        </View>
       );
     };
     return (
