@@ -10,7 +10,6 @@ import Login from "./LoginComponent";
 import About from "./AboutComponent";
 import {
   View,
-  Platform,
   ScrollView,
   Image,
   StyleSheet,
@@ -273,7 +272,7 @@ const MainNavigator = createDrawerNavigator(
     }
   },
   {
-    drawerBackgroundColor: "#D1C4E9",
+    drawerBackgroundColor: "#787878",
     contentComponent: CustomDrawerContentComponent
   }
 );

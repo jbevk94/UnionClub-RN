@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ListItem, Tile, Button, Text, Image } from "react-native-elements";
 import { BENEFITS } from "../shared/benefits";
-import { ScrollView, View, StyleSheet } from "react-native";
+import { ScrollView, View } from "react-native";
 
 class Home extends Component {
   constructor(props) {
